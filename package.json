@@ -5,7 +5,7 @@
     "files",
     "FileList"
   ],
-  "version": "0.0.0",
+  "version": "1.0.0",
   "main": "lib/create-file-list.min.js",
   "module": "lib/create-file-list.min.mjs",
   "unpkg": "lib/create-file-list.min.js",

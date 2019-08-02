@@ -10,6 +10,7 @@ cache:
 before_install:
   - npm install yarn
 install:
+  - yarn config get save-prefix
   - yarn
 script:
   - yarn lint

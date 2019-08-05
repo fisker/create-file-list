@@ -31,7 +31,8 @@
     "lint:markdown": "markdownlint \"**/*.md\" --ignore \"**/node_modules/**\"",
     "lint:prettier": "prettier \"**/*.{css,html,js,json,less,md,scss,ts,vue,yaml,yml}\" --check",
     "release": "run-s clean lint build test format dist",
-    "test": "ava"
+    "test": "ava",
+    "test-coverage": "nyc ava"
   },
   "files": [
     "lib"
@@ -68,14 +69,18 @@
     }
   },
   "ava": {
-    "require": [
-      "esm"
-    ],
-    "verbose": true
+    "verbose": true,
+    "require": "esm"
   },
   "nyc": {
-    "require": [
-      "esm"
+    "all": true,
+    "require": "esm",
+    "reporter": [
+      "lcov",
+      "text"
+    ],
+    "include": [
+      "src/**"
     ]
   },
   "publishConfig": {

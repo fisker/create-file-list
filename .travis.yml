@@ -1,17 +1,18 @@
 language: node_js
 node_js:
   - "lts/*"
-  - "8"
-  - "10"
-  - "12"
-sudo: false
 cache:
   yarn: true
 before_install:
-  - npm install yarn
+  - npm install --global yarn nyc
 install:
   - yarn
 script:
   - yarn lint
   - yarn build
-  - yarn test
+  - yarn test-coverage
+after_script:
+  - npm install --global codecov coveralls codacy-coverage
+  - cat ./coverage/lcov.info | coveralls
+  - cat ./coverage/lcov.info | codecov
+  - cat ./coverage/lcov.info | codacy-coverage

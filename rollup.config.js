@@ -28,9 +28,10 @@ const esmBuild = {
 
 function minify(bundle) {
   let {input, output, plugins} = bundle
-  output = Object.assign({}, output, {
+  output = {
+    ...output,
     file: output.file.replace(/\.(m?js)$/, '.min.$1'),
-  })
+  }
   plugins = [...plugins, terser()]
   return {
     input,

@@ -50,7 +50,7 @@
     "babel-plugin-transform-async-to-promises": "0.8.14",
     "create-test-server": "3.0.1",
     "cz-conventional-changelog": "3.0.2",
-    "eslint": "6.2.2",
+    "eslint": "6.3.0",
     "esm": "3.2.25",
     "husky": "3.0.4",
     "lint-staged": "9.2.5",

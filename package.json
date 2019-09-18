@@ -45,7 +45,7 @@
     "@fisker/eslint-config": "1.2.19",
     "@fisker/husky-config": "1.1.2",
     "@fisker/lint-staged-config": "1.0.5",
-    "@fisker/prettier-config": "1.0.20",
+    "@fisker/prettier-config": "1.0.21",
     "ava": "2.4.0",
     "babel-plugin-transform-async-to-promises": "0.8.14",
     "create-test-server": "3.0.1",

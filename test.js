@@ -64,7 +64,7 @@ test('src', withPage, async (t, page) => {
 })
 
 test('esm build', withPage, async (t, page) => {
-  const results = await testEsm(page, './lib/create-file-list.mjs')
+  const results = await testEsm(page, './dist/create-file-list.mjs')
   for (const [, result] of Object.entries(results)) {
     t.true(result)
   }
@@ -72,7 +72,7 @@ test('esm build', withPage, async (t, page) => {
 
 test('umd build', withPage, async (t, page) => {
   await page.goto('about:blank')
-  await page.addScriptTag({path: './lib/create-file-list.js'})
+  await page.addScriptTag({path: './dist/create-file-list.js'})
 
   const results = await page.evaluate(testScript)
 

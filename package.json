@@ -6,10 +6,10 @@
     "FileList"
   ],
   "version": "1.0.0",
-  "main": "lib/create-file-list.min.js",
-  "module": "lib/create-file-list.min.mjs",
-  "unpkg": "lib/create-file-list.min.js",
-  "jsdelivr": "lib/create-file-list.min.js",
+  "main": "dist/create-file-list.min.js",
+  "module": "dist/create-file-list.min.mjs",
+  "unpkg": "dist/create-file-list.min.js",
+  "jsdelivr": "dist/create-file-list.min.js",
   "repository": "fisker/create-file-list",
   "author": {
     "name": "fisker Cheung",
@@ -20,12 +20,14 @@
   "scripts": {
     "build": "run-p build:*",
     "build:js": "rollup --config",
-    "clean": "rimraf lib",
+    "clean": "run-p clean:*",
+    "clean:dist": "del-cli dist",
     "dist": "run-p dist:*",
     "dist:npm": "np --yolo --no-yarn",
     "format": "run-p format:*",
     "format:eslint": "yarn lint:eslint --fix",
-    "format:prettier": "prettier \"**/*.{css,html,js,json,less,md,scss,ts,vue,yaml,yml}\" --write",
+    "format:markdown": "yarn lint:markdown --fix",
+    "format:prettier": "yarn lint:prettier --write",
     "lint": "run-p lint:*",
     "lint:eslint": "eslint \"**/*.{js,mjs,vue}\"",
     "lint:markdown": "markdownlint \"**/*.md\" --ignore \"**/node_modules/**\"",
@@ -35,7 +37,7 @@
     "test-coverage": "nyc ava"
   },
   "files": [
-    "lib"
+    "dist"
   ],
   "devDependencies": {
     "@babel/core": "7.7.4",
@@ -50,6 +52,7 @@
     "babel-plugin-transform-async-to-promises": "0.8.15",
     "create-test-server": "3.0.1",
     "cz-conventional-changelog": "3.0.2",
+    "del-cli": "3.0.0",
     "eslint": "6.7.0",
     "esm": "3.2.25",
     "husky": "3.1.0",
@@ -59,7 +62,6 @@
     "nyc": "14.1.1",
     "prettier": "1.19.1",
     "puppeteer": "2.0.0",
-    "rimraf": "3.0.0",
     "rollup": "1.27.4",
     "rollup-plugin-babel": "4.3.3",
     "rollup-plugin-terser": "5.1.2"

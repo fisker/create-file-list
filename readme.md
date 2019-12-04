@@ -1,8 +1,8 @@
 # create-file-list
 
-[![gzip size](http://img.badgesize.io/https://unpkg.com/create-file-list/lib/create-file-list.min.mjs?compression=gzip&label=gzip%20size&style=flat-square)](https://unpkg.com/create-file-list/lib/)
+[![gzip size](http://img.badgesize.io/https://unpkg.com/create-file-list/dist/create-file-list.min.mjs?compression=gzip&label=gzip%20size&style=flat-square)](https://unpkg.com/create-file-list/dist/)
 [![downloads](https://img.shields.io/npm/dm/create-file-list.svg?style=flat-square)](https://www.npmtrends.com/create-file-list)
-[![module formats: umd, cjs, and es](https://img.shields.io/badge/module%20formats-umd%2C%20cjs%2C%20es-green.svg?style=flat-square)](https://unpkg.com/create-file-list/lib/)
+[![module formats: umd, cjs, and es](https://img.shields.io/badge/module%20formats-umd%2C%20cjs%2C%20es-green.svg?style=flat-square)](https://unpkg.com/create-file-list/dist/)
 [![jsdelivr](https://data.jsdelivr.com/v1/package/npm/create-file-list/badge)](https://www.jsdelivr.com/package/npm/create-file-list)
 
 [![Build Status](https://img.shields.io/travis/fisker/create-file-list.svg?style=flat-square)](https://travis-ci.org/fisker/create-file-list)

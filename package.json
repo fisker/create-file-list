@@ -1,22 +1,26 @@
 {
   "name": "create-file-list",
+  "version": "1.0.1",
   "description": "create FileList",
   "keywords": [
-    "files",
-    "FileList"
+    "FileList",
+    "files"
   ],
-  "version": "1.0.1",
-  "main": "dist/create-file-list.min.js",
-  "module": "dist/create-file-list.min.mjs",
-  "unpkg": "dist/create-file-list.min.js",
-  "jsdelivr": "dist/create-file-list.min.js",
   "repository": "fisker/create-file-list",
+  "license": "MIT",
   "author": {
     "name": "fisker Cheung",
     "email": "lionkay@gmail.com",
     "url": "https://www.fiskercheung.com/"
   },
-  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "main": "dist/create-file-list.min.js",
+  "jsdelivr": "dist/create-file-list.min.js",
+  "unpkg": "dist/create-file-list.min.js",
+  "module": "dist/create-file-list.min.mjs",
   "scripts": {
     "build": "run-p build:*",
     "build:js": "rollup --config",
@@ -38,9 +42,26 @@
     "test": "ava",
     "test-coverage": "nyc ava"
   },
-  "files": [
-    "dist"
-  ],
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "ava": {
+    "require": "esm",
+    "verbose": true
+  },
+  "nyc": {
+    "all": true,
+    "include": [
+      "src/**"
+    ],
+    "reporter": [
+      "lcov",
+      "text"
+    ],
+    "require": "esm"
+  },
   "devDependencies": {
     "@babel/core": "7.7.4",
     "@babel/preset-env": "7.7.4",
@@ -69,29 +90,8 @@
     "rollup-plugin-terser": "5.1.2",
     "sort-package-json": "1.30.0"
   },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
-  },
-  "ava": {
-    "verbose": true,
-    "require": "esm"
-  },
-  "nyc": {
-    "all": true,
-    "require": "esm",
-    "reporter": [
-      "lcov",
-      "text"
-    ],
-    "include": [
-      "src/**"
-    ]
-  },
   "publishConfig": {
-    "registry": "https://registry.npmjs.org/",
-    "access": "public"
-  },
-  "sideEffects": false
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
 }

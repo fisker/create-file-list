@@ -27,7 +27,7 @@ jobs:
 
     name: Test on node ${{ matrix.NODE }} and ${{ matrix.PLATFORM }}
     runs-on: ${{ matrix.PLATFORM }}
-    # needs: [build]
+    needs: [build]
     steps:
       - name: Checkout
         uses: actions/checkout@master
@@ -40,11 +40,11 @@ jobs:
       - name: Install Dependencies
         run: yarn
 
-      # - name: Download Artifact
-      #   uses: actions/download-artifact@master
-      #   with:
-      #     name: dist
-      #     path: dist
+      - name: Download Artifact
+        uses: actions/download-artifact@master
+        with:
+          name: dist
+          path: dist
 
       - name: Run Test
         run: yarn test-coverage

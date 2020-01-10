@@ -40,7 +40,7 @@
     "lint:prettier": "prettier \"**/*.{css,html,js,json,less,md,scss,ts,vue,yaml,yml}\" --check",
     "release": "run-s clean lint build test format dist",
     "test": "ava",
-    "test-coverage": "nyc ava"
+    "test-coverage": "nyc yarn test"
   },
   "config": {
     "commitizen": {
@@ -48,19 +48,19 @@
     }
   },
   "ava": {
-    "require": "esm",
+    "require": [
+      "esm"
+    ],
     "verbose": true
   },
   "nyc": {
-    "all": true,
     "include": [
       "src/**"
     ],
     "reporter": [
       "lcov",
       "text"
-    ],
-    "require": "esm"
+    ]
   },
   "devDependencies": {
     "@babel/core": "7.7.7",

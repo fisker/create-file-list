@@ -85,7 +85,7 @@
     "nyc": "15.0.0",
     "prettier": "1.19.1",
     "puppeteer": "2.0.0",
-    "rollup": "1.29.1",
+    "rollup": "1.30.0",
     "rollup-plugin-babel": "4.3.3",
     "rollup-plugin-terser": "5.2.0",
     "sort-package-json": "1.39.0"

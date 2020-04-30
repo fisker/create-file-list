@@ -11,11 +11,15 @@ jobs:
       - checkout
 
       - run:
-          name: Install dependencies
+          name: Install Linux Dependencies
+          command: bash <(curl -s -L https://github.com/fisker/scripts/raw/master/circleci/puppeteer-dependencies.sh)
+
+      - run:
+          name: Install Dependencies
           command: yarn
 
       - run:
-          name: Build dist
+          name: Build Dist
           command: yarn build
 
       - store_artifacts:

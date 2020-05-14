@@ -3,7 +3,7 @@ const {concat} = Array.prototype
 
 try {
   getDataTransfer()
-} catch (_) {
+} catch {
   getDataTransfer = () => new ClipboardEvent('').clipboardData
 }
 

@@ -90,7 +90,7 @@
     "rollup": "2.33.3",
     "rollup-plugin-babel": "4.4.0",
     "rollup-plugin-terser": "7.0.2",
-    "sort-package-json": "1.46.1"
+    "sort-package-json": "1.47.0"
   },
   "publishConfig": {
     "access": "public",

@@ -10,13 +10,13 @@ try {
 function createFileList() {
   // eslint-disable-next-line prefer-rest-params
   const files = concat.apply([], arguments)
-  let i = 0
+  let index = 0
   const {length} = files
 
   const dataTransfer = getDataTransfer()
 
-  for (; i < length; i++) {
-    dataTransfer.items.add(files[i])
+  for (; index < length; index++) {
+    dataTransfer.items.add(files[index])
   }
 
   return dataTransfer.files

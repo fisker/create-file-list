@@ -7,8 +7,8 @@ async function withPage(t, run) {
   const browser = await puppeteer.launch()
   const page = await browser.newPage()
   page.on('console', (message) => {
-    for (let i = 0; i < message.args().length; i += 1) {
-      console.log(`${i}: ${message.args()[i]}`)
+    for (let index = 0; index < message.args().length; index += 1) {
+      console.log(`${index}: ${message.args()[index]}`)
     }
   })
   try {

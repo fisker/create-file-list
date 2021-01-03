@@ -78,7 +78,7 @@
     "create-test-server": "3.0.1",
     "cz-conventional-changelog": "3.3.0",
     "del-cli": "3.0.1",
-    "eslint": "7.16.0",
+    "eslint": "7.17.0",
     "esm": "3.2.25",
     "husky": "4.3.6",
     "lint-staged": "10.5.3",

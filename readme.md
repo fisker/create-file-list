@@ -10,7 +10,7 @@
 [![MIT License](https://img.shields.io/npm/l/create-file-list.svg?style=flat-square)](https://github.com/fisker/create-file-list/blob/master/license)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
-> create FileList
+> Create `FileList`
 
 ## Install
 
@@ -40,4 +40,4 @@ createFileList([value1[, value2[, ...[, valueN]]]])
 
 ### valueN
 
-File or Array&lt;File&gt;
+`File` or `File[]`

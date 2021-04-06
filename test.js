@@ -57,7 +57,7 @@ async function testEsm(page, file) {
 }
 
 test('src', withPage, async (t, page) => {
-  const results = await testEsm(page, './src/index.js')
+  const results = await testEsm(page, './src/index.mjs')
   for (const [, result] of Object.entries(results)) {
     t.true(result)
   }

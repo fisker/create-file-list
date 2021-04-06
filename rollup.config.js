@@ -1,7 +1,7 @@
 import {terser} from 'rollup-plugin-terser'
 import babel from 'rollup-plugin-babel'
 
-const input = 'src/index.js'
+const input = 'src/index.mjs'
 const name = 'createFileList'
 const filename = 'create-file-list'
 const umdBuild = {

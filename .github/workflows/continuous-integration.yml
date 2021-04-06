@@ -32,11 +32,6 @@ jobs:
         with:
           node-version: ${{ matrix.node_version }}
 
-      # puppeteer@3 requires these
-      - name: Install System Dependencies
-        if: matrix.os == 'ubuntu-latest'
-        run: sudo apt-get install libgbm1
-
       - name: Install Dependencies
         run: yarn
 

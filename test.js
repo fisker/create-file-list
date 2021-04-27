@@ -1,7 +1,7 @@
 import test from 'ava'
 import createTestServer from 'create-test-server'
 import puppeteer from 'puppeteer'
-import fs from 'fs'
+import fs from 'node:fs'
 
 async function withPage(t, run) {
   const browser = await puppeteer.launch()

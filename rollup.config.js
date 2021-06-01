@@ -1,5 +1,5 @@
 import {terser} from 'rollup-plugin-terser'
-import babel from 'rollup-plugin-babel'
+import babel from '@rollup/plugin-babel'
 
 const input = 'src/index.mjs'
 const name = 'createFileList'
@@ -22,7 +22,7 @@ const esmBuild = {
   },
   plugins: [
     // do we need babel ?
-    babel(),
+    babel({babelHelpers: 'bundled'}),
   ],
 }
 
@@ -42,4 +42,4 @@ function minify(bundle) {
 
 const builds = [umdBuild, esmBuild]
 
-export default [...builds, ...builds.map(minify)]
+export default [...builds, ...builds.map((bundle) => minify(bundle))]

@@ -1,7 +1,7 @@
+import fs from 'node:fs'
 import test from 'ava'
 import createTestServer from 'create-test-server'
 import puppeteer from 'puppeteer'
-import fs from 'node:fs'
 
 async function withPage(t, run) {
   const browser = await puppeteer.launch()
@@ -24,13 +24,13 @@ function testScript() {
   const file2 = new window.File([], 'test2.txt', {type: 'text/plain'})
 
   const constructor = window.FileList
-  const filelist = window.createFileList(file1, [file2])
+  const fileList = window.createFileList(file1, [file2])
   const emptyFileList = window.createFileList()
 
   return {
-    'filelist length': filelist.length === 2,
-    'filelist item': filelist.item(1) === file2,
-    'filelist constructor': filelist.constructor === constructor,
+    'fileList length': fileList.length === 2,
+    'fileList item': fileList.item(1) === file2,
+    'fileList constructor': fileList.constructor === constructor,
     'emptyFileList length': emptyFileList.length === 0,
     'emptyFileList constructor': emptyFileList.constructor === constructor,
   }

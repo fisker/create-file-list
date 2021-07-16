@@ -73,7 +73,7 @@
     "babel-plugin-transform-async-to-promises": "0.8.15",
     "create-test-server": "3.0.1",
     "cz-conventional-changelog": "3.3.0",
-    "del-cli": "4.0.0",
+    "del-cli": "4.0.1",
     "eslint": "7.30.0",
     "husky": "7.0.1",
     "lint-staged": "11.0.1",

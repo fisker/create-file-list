@@ -75,7 +75,7 @@
     "create-test-server": "3.0.1",
     "cz-conventional-changelog": "3.3.0",
     "del-cli": "4.0.1",
-    "eslint": "8.15.0",
+    "eslint": "8.18.0",
     "husky": "7.0.4",
     "launch-puppeteer": "0.0.3",
     "lint-staged": "12.4.1",

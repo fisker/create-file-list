@@ -76,7 +76,7 @@
     "cz-conventional-changelog": "3.3.0",
     "del-cli": "5.0.0",
     "eslint": "8.27.0",
-    "husky": "8.0.3",
+    "husky": "9.1.7",
     "launch-puppeteer": "0.0.3",
     "lint-staged": "13.0.3",
     "markdownlint-cli": "0.32.2",
